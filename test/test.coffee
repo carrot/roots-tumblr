@@ -24,12 +24,9 @@ describe 'roots-tumblr', ->
           <meta name="if:Show people I follow" content="1"/>
           <meta name="if:Reverse pagination" content="0"/>
         </head>
-        <body>
-
-          <a href="...">Previous</a> <a href="...">Next</a>
+        <body><a href="...">Previous</a><a href="...">Next</a>
 
           <div id="following">...</div>
-
         </body>
       </html>
     ''')
