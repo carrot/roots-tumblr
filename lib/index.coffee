@@ -1,4 +1,3 @@
-RootsUtil = require 'roots-util'
 path = require 'path'
 {compile} = require 'tumblr-theme-parser'
 
