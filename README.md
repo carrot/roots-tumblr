@@ -4,12 +4,23 @@
 This is an extension to make building Tumblr themes easier, or make it easier to take Tumblr themes and use them outside of Tumblr. It's basically a wrapper around [tumblr-theme-parser](https://www.npmjs.com/package/tumblr-theme-parser).
 
 ## Installation
-- make sure you are in a [roots](https://github.com/jenius/roots) project directory
+- ensure you are in a [roots](https://github.com/jenius/roots) project directory
 - `npm install roots-tumblr --save`
-- login to [tumblr](https://www.tumblr.com/login) and go to the URL `https://www.tumblr.com/customize_api/demo_content/YOURBLOGNAME`
-- Save JSON that's returned in a file like `./tumblr-demo-content.json`.
 
 ## Usage
+To use the default [tumblr json export](lib/default.json):
+
+```coffee
+# app.coffee
+tumblr = require 'roots-tumblr'
+
+module.exports =
+  extensions: [tumblr()]
+```
+
+To use a custom tumblr json export:
+- login to [tumblr](https://www.tumblr.com/login) and go to the URL `https://www.tumblr.com/customize_api/demo_content/YOURBLOGNAME`
+- Save JSON that's returned in a file like `./tumblr-demo-content.json`.
 
 ```coffee
 # app.coffee
