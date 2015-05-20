@@ -11,8 +11,7 @@ BLACKLISTED_FILE_EXTENSIONS = [
 
 module.exports = (data) ->
   class TumblrCompiler
-    constructor: ->
-      @data = data || {}
+    data ?= require './default'
 
     fs: ->
       category: 'tumblr-markup'
@@ -22,8 +21,8 @@ module.exports = (data) ->
 
     compile_hooks: ->
       category: 'tumblr-markup'
-      'after_file': (ctx) =>
+      'after_file': (ctx) ->
         # just a crude extension check... the compiler will let the markup pass
         # through unchanged if it turns out this is just regular html
         if ctx['out_ext'] is 'html'
-          ctx.content = compile(ctx.content.toString('utf8'), @data)
+          ctx.content = compile(ctx.content.toString('utf8'), data)

@@ -21,13 +21,15 @@ after ->
 describe 'roots-tumblr basic', ->
   before (done) -> compile_fixture.call(@, 'basic', done)
 
-  it 'compiles basic project without tumblr json', ->
+  it 'compiles basic project with default tumblr json', ->
     p = path.join(@public, 'index.html')
     fs.readFileSync(p, encoding: 'utf8').trim().should.equal('''
       <html>
         <head>
           <meta name="if:Show people I follow" content="1"/>
           <meta name="if:Reverse pagination" content="0"/>
+          <title>Untitled</title>
+          <link rel="shortcut icon" href="https://secure.assets.tumblr.com/images/default_avatar/pyramid_closed_128.png"/>
         </head>
         <body><a href="...">Previous</a><a href="...">Next</a>
 
@@ -46,7 +48,7 @@ describe 'roots-tumblr withData', ->
         <head>
           <meta name="if:Show people I follow" content="1"/>
           <meta name="if:Reverse pagination" content="0"/>
-          <title>Untitled</title>
+          <title>Not Untitled</title>
           <link rel="shortcut icon" href="https://secure.assets.tumblr.com/images/default_avatar/pyramid_closed_128.png"/>
         </head>
         <body><a href="...">Previous</a><a href="...">Next</a>
