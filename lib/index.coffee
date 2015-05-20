@@ -6,7 +6,7 @@ path = require 'path'
 # we need a blacklist rather than just a whitelist. this issue is caused by the
 # fact that roots doesn't re-run detection when a file's extension changes.
 BLACKLISTED_FILE_EXTENSIONS = [
-  '.jpg', '.gif', '.png', '.css', '.styl', '.js', '.coffee'
+  '.jpg', '.gif', '.png', '.css', '.styl', '.js', '.coffee', '.scss'
 ]
 
 module.exports = (data) ->
