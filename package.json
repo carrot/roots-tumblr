@@ -1,7 +1,7 @@
 {
   "name": "roots-tumblr",
-  "description": "tumblr theme compilation roots",
-  "version": "0.0.2",
+  "description": "tumblr theme compilation with roots",
+  "version": "0.0.3",
   "author": "Sean Lang <slang800@gmail.com>",
   "dependencies": {
     "tumblr-theme-parser": "0.0.0"
