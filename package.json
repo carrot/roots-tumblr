@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "author": "Sean Lang <slang800@gmail.com>",
   "dependencies": {
-    "tumblr-theme-parser": "0.0.1"
+    "tumblr-theme-parser": "^1.0.0"
   },
   "devDependencies": {
     "coffee-script": "1.9.x",
